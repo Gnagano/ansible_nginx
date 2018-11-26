@@ -1,0 +1,12 @@
+---
+nginx_document_root: '/home/doc_root/'
+nginx_php_fpm_version: '7.0'
+
+nginx_service_port: 80
+
+nginx_packages:
+  - nginx
+  - php{{ nginx_php_fpm_version }}-fpm
+
+nginx_vhost_conf:
+  /etc/nginx/sites-enabled/default
